@@ -9,6 +9,7 @@ exports.comment = (req, res) => {
             console.log(error)
         } else {
             response.getStatus(rows, res)
+
         }
     })
 }
@@ -20,7 +21,7 @@ exports.addComment = (req, res) => {
             console.log(error)
         } else {
             response.createStatus(results, res)
-            console.log(res)
+
         }
     })
 
