@@ -21,6 +21,7 @@ exports.addComment = (req, res) => {
             console.log(error)
         } else {
             response.createStatus(results, res)
+            console.log(results)
 
         }
     })
@@ -28,7 +29,7 @@ exports.addComment = (req, res) => {
 }
 
 exports.updateComment = (req, res) => {
-    const sql = "UPDATE `comment` SET `id`='" + req.body[0].id + "',`name`='" + req.body[0].name + "',`title`='" + req.body[0].title + "',`date_now`='" + req.body[0].date_now + "' WHERE id = '" + req.body[0].id + "' ;"
+    const sql = "UPDATE `comment` SET `id`='" + req.body[0].id + "',`name`='" + req.body[0].name + "',`title`='" + req.body[0].title + "' WHERE id = '" + req.body[0].id + "' ;"
     db.query(sql, (error, results) => {
         if (error) {
             console.log(error)
